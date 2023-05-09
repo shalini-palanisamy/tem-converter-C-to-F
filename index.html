@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius to Fehrenheit</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="heading">
+            <h2>Celcius to Fehrenheit</h2>
+        </div>
+        <div>
+                <input type="text" placeholder="Celcius value need to convert" id="input">
+        </div>
+        <div>
+            <button onclick="convert()">
+                Convert
+            </button>
+        </div>
+      <div id="result">
+
+      </div>
+    </div>
+    <script>
+        function convert()
+        {
+            let celval=Number(document.getElementById("input").value);
+            let feh=celval*(1.8)+32;
+            let result = document.getElementById("result");
+            result.innerHTML=feh.toFixed(2)+"F";
+        }
+        
+    </script>
+
+
+
+</body>
+</html>
